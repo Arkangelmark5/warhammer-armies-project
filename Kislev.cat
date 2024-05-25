@@ -523,6 +523,23 @@
                 <infoLink id="8c7b-8f26-e682-4460" name="Swiftstride" hidden="false" targetId="fdd9-fa75-5594-d363" type="rule"/>
                 <infoLink id="ae7d-5363-a585-52e1" name="Impact Hits (D6)" hidden="false" targetId="e9e6-66cc-623f-8e94" type="rule"/>
               </infoLinks>
+              <selectionEntries>
+                <selectionEntry id="8786-1cce-649b-de2d" name="War Bear" hidden="false" collective="true" import="true" type="model">
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="4210-0a92-5259-6fcc" type="max"/>
+                    <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="409a-91c9-f1a3-4b1a" type="min"/>
+                  </constraints>
+                  <infoLinks>
+                    <infoLink id="2051-b1bb-9e4a-a7fd" name="War Bear" hidden="false" targetId="05f8-36d0-ab51-d90b" type="profile"/>
+                    <infoLink id="cfcf-1d9b-3dc6-b0a1" name="Fear" hidden="false" targetId="7bd0-8602-4375-a731" type="rule"/>
+                    <infoLink id="c35f-af2f-6b75-98a8" name="Natural Armour (5+)" hidden="false" targetId="306d-711a-1300-587f" type="rule"/>
+                    <infoLink id="24ec-9b99-99d2-c940" name="Fury of Ursun" hidden="false" targetId="a0eb-02ba-012b-ceb2" type="rule"/>
+                  </infoLinks>
+                  <costs>
+                    <cost name="pts" typeId="points" value="0.0"/>
+                  </costs>
+                </selectionEntry>
+              </selectionEntries>
               <costs>
                 <cost name="pts" typeId="points" value="110.0"/>
               </costs>
