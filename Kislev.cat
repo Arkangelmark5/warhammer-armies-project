@@ -757,14 +757,6 @@
             <cost name="pts" typeId="points" value="0.0"/>
           </costs>
         </selectionEntry>
-        <selectionEntry id="fa11-a9a0-b075-bfc5" name="Hand Weapon" hidden="false" collective="false" import="true" type="upgrade">
-          <infoLinks>
-            <infoLink id="59c4-fb0d-d372-7318" name="Hand Weapon" hidden="false" targetId="f6da-d707-0cd6-b1dd" type="profile"/>
-          </infoLinks>
-          <costs>
-            <cost name="pts" typeId="points" value="0.0"/>
-          </costs>
-        </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
         <selectionEntryGroup id="c9a5-0cf7-a337-a7b2" name="Primary Weapon" hidden="false" collective="false" import="true">
@@ -829,6 +821,14 @@
               </infoLinks>
               <costs>
                 <cost name="pts" typeId="points" value="6.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="ab5e-b928-bc98-740a" name="Hand Weapon" hidden="false" collective="false" import="true" type="upgrade">
+              <infoLinks>
+                <infoLink id="a768-5fe0-7f45-5f40" name="Hand Weapon" hidden="false" targetId="f6da-d707-0cd6-b1dd" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="0.0"/>
               </costs>
             </selectionEntry>
           </selectionEntries>
