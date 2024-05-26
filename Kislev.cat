@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="443d-406a-91b3-9788" name="Kislev" revision="26" battleScribeVersion="2.03" authorName="L3610N 115" authorContact="Contact me on the Warhammer Armies Project Discord (1st link) or on the BSData Developers Discord (2nd link)" authorUrl="https://discordapp.com/invite/AaNyj9s" library="false" gameSystemId="9e23-79cb-afed-cf4c" gameSystemRevision="54" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="443d-406a-91b3-9788" name="Kislev" revision="27" battleScribeVersion="2.03" authorName="L3610N 115" authorContact="Contact me on the Warhammer Armies Project Discord (1st link) or on the BSData Developers Discord (2nd link)" authorUrl="https://discordapp.com/invite/AaNyj9s" library="false" gameSystemId="9e23-79cb-afed-cf4c" gameSystemRevision="54" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <readme>https://discordapp.com/invite/UrrPB3T</readme>
   <profileTypes>
     <profileType id="653e-2e64-2ba1-dc1b" name="Drunken Stupor Table">
@@ -336,10 +336,10 @@
             <characteristic name="WS" typeId="f049-8a65-9c04-1559">3</characteristic>
             <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">3</characteristic>
             <characteristic name="S" typeId="edd2-7979-54a4-6b35">3</characteristic>
-            <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">4</characteristic>
+            <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">3</characteristic>
             <characteristic name="W" typeId="27ee-0675-122f-a1b1">3</characteristic>
             <characteristic name="I" typeId="7cca-e51f-edc2-7322">3</characteristic>
-            <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">1</characteristic>
+            <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">4</characteristic>
             <characteristic name="LD" typeId="a199-f10b-a038-5730">9</characteristic>
             <characteristic name="Type" typeId="13f9-a26b-05af-3459">Infantry, Character, Human</characteristic>
           </characteristics>
@@ -1467,9 +1467,53 @@
           </costs>
         </selectionEntry>
       </selectionEntries>
-      <entryLinks>
-        <entryLink id="6066-6f64-4b75-7578" name="Command Group" hidden="false" collective="false" import="true" targetId="29fb-0740-1afe-12a1" type="selectionEntryGroup"/>
-      </entryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="8ce8-8407-5a7d-5b45" name="Command Group" hidden="false" collective="false" import="true">
+          <selectionEntries>
+            <selectionEntry id="688d-3f0e-3eed-910d" name="Leader" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="5c55-a22a-0e24-2dcf" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="fd6d-0e40-1fbd-b399" name="Leader" hidden="false" targetId="777a-7a64-44fa-a78e" type="rule"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="5.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="415e-918e-bb05-a656" name="Musician" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="d75c-5dde-6c49-a10f" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="da58-deca-c0f1-169b" name="Musician" hidden="false" targetId="54c3-1d1b-3ffe-59a5" type="rule"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="5.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="2676-a933-7aaf-c579" name="Standard Bearer" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="2b01-e110-4a68-07de" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="8f51-430a-e248-67d9" name="Standard Bearer" hidden="false" targetId="6002-29d0-d620-1bd0" type="rule"/>
+              </infoLinks>
+              <entryLinks>
+                <entryLink id="71ab-9e38-8100-8722" name="Magic Standards" hidden="false" collective="false" import="true" targetId="36b5-7e17-a3d6-e5c7" type="selectionEntryGroup">
+                  <constraints>
+                    <constraint field="points" scope="parent" value="25.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="612f-fe38-e80b-4b96" type="max"/>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="f26f-16ee-9cc1-0415" type="max"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="10.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
       <costs>
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
@@ -1697,9 +1741,53 @@
           </costs>
         </selectionEntry>
       </selectionEntries>
-      <entryLinks>
-        <entryLink id="5974-6d6a-9ba5-4880" name="Command Group" hidden="false" collective="false" import="true" targetId="29fb-0740-1afe-12a1" type="selectionEntryGroup"/>
-      </entryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="41d8-cd2c-fe90-821d" name="Command Group" hidden="false" collective="false" import="true">
+          <selectionEntries>
+            <selectionEntry id="fddb-fe90-e3c8-cf1d" name="Leader" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="68b9-1749-dff3-9819" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="1693-6e94-4b23-8523" name="Leader" hidden="false" targetId="777a-7a64-44fa-a78e" type="rule"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="5.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="782a-661d-3ce2-4810" name="Musician" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="d9eb-b88b-2983-f62f" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="3e52-f35c-5dd8-82bf" name="Musician" hidden="false" targetId="54c3-1d1b-3ffe-59a5" type="rule"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="5.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="c1b4-7de7-7527-7b2c" name="Standard Bearer" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="3b5f-6fda-8373-f26d" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="815c-92ba-268c-5e31" name="Standard Bearer" hidden="false" targetId="6002-29d0-d620-1bd0" type="rule"/>
+              </infoLinks>
+              <entryLinks>
+                <entryLink id="d43d-dd94-98d4-132e" name="Magic Standards" hidden="false" collective="false" import="true" targetId="36b5-7e17-a3d6-e5c7" type="selectionEntryGroup">
+                  <constraints>
+                    <constraint field="points" scope="parent" value="25.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3e5f-0e91-e232-9dff" type="max"/>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="da4d-b00a-2fd9-0f91" type="max"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="10.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
       <costs>
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
@@ -1779,9 +1867,53 @@
           </costs>
         </selectionEntry>
       </selectionEntries>
-      <entryLinks>
-        <entryLink id="e3ed-288a-9e22-da4d" name="Command Group" hidden="false" collective="false" import="true" targetId="29fb-0740-1afe-12a1" type="selectionEntryGroup"/>
-      </entryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="4ade-f0ac-784c-acf0" name="Command Group" hidden="false" collective="false" import="true">
+          <selectionEntries>
+            <selectionEntry id="f146-c6dc-226f-0213" name="Leader" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="a5ac-b1f6-2c7a-ba56" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="3571-5512-289d-28d1" name="Leader" hidden="false" targetId="777a-7a64-44fa-a78e" type="rule"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="5.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="c717-7add-4030-261c" name="Musician" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="c280-de25-a8dd-38fa" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="0f13-e301-37e9-d4de" name="Musician" hidden="false" targetId="54c3-1d1b-3ffe-59a5" type="rule"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="5.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="09a9-45a9-cb4a-0616" name="Standard Bearer" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="b62a-5e2c-a760-125c" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="2060-6505-9bac-5694" name="Standard Bearer" hidden="false" targetId="6002-29d0-d620-1bd0" type="rule"/>
+              </infoLinks>
+              <entryLinks>
+                <entryLink id="7f99-65d2-76a8-aba6" name="Magic Standards" hidden="false" collective="false" import="true" targetId="36b5-7e17-a3d6-e5c7" type="selectionEntryGroup">
+                  <constraints>
+                    <constraint field="points" scope="parent" value="25.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="58df-699f-d13b-0d2e" type="max"/>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="4bee-b249-e57e-7f8f" type="max"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="10.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
       <costs>
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
@@ -1885,9 +2017,53 @@
           </costs>
         </selectionEntry>
       </selectionEntries>
-      <entryLinks>
-        <entryLink id="4f8a-8a94-71f3-d2e5" name="Command Group" hidden="false" collective="false" import="true" targetId="29fb-0740-1afe-12a1" type="selectionEntryGroup"/>
-      </entryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="0948-65f8-5b4b-bfe4" name="Command Group" hidden="false" collective="false" import="true">
+          <selectionEntries>
+            <selectionEntry id="3371-ff33-76a9-b299" name="Leader" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="1c3f-8932-8f99-20bd" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="722b-c634-d0c0-18c2" name="Leader" hidden="false" targetId="777a-7a64-44fa-a78e" type="rule"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="5.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="0bc8-fdbb-ea38-0c19" name="Musician" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="6634-88b2-a8f4-9277" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="6e40-9983-c567-570f" name="Musician" hidden="false" targetId="54c3-1d1b-3ffe-59a5" type="rule"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="5.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="544f-feb2-b672-fab7" name="Standard Bearer" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="00b5-a84e-9cec-46f9" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="4eb4-5ddd-a553-4329" name="Standard Bearer" hidden="false" targetId="6002-29d0-d620-1bd0" type="rule"/>
+              </infoLinks>
+              <entryLinks>
+                <entryLink id="3241-2537-8cd3-51c9" name="Magic Standards" hidden="false" collective="false" import="true" targetId="36b5-7e17-a3d6-e5c7" type="selectionEntryGroup">
+                  <constraints>
+                    <constraint field="points" scope="parent" value="50.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="ff9e-11a8-66d9-b275" type="max"/>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="b90e-77eb-c8bf-f9d8" type="max"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="10.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
       <costs>
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
@@ -1974,9 +2150,52 @@
           </costs>
         </selectionEntry>
       </selectionEntries>
-      <entryLinks>
-        <entryLink id="c3d7-0573-065c-69d1" name="Command Group" hidden="false" collective="false" import="true" targetId="29fb-0740-1afe-12a1" type="selectionEntryGroup"/>
-      </entryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="0f22-676d-bd9c-9f09" name="Command Group" hidden="false" collective="false" import="true">
+          <selectionEntries>
+            <selectionEntry id="39fe-7126-b3d7-c25c" name="Leader" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="3245-f495-bd91-47c3" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="77b3-a8ff-c297-0cea" name="Leader" hidden="false" targetId="777a-7a64-44fa-a78e" type="rule"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="5.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="cf26-556c-4442-27bf" name="Musician" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="4bc0-9e5a-42dc-904a" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="7931-fb95-c25e-2ec4" name="Musician" hidden="false" targetId="54c3-1d1b-3ffe-59a5" type="rule"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="5.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="5655-a5ae-abd0-311a" name="Standard Bearer" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="0913-81a5-6d68-84dd" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="77ac-86cb-c90a-cb3f" name="Standard Bearer" hidden="false" targetId="6002-29d0-d620-1bd0" type="rule"/>
+              </infoLinks>
+              <entryLinks>
+                <entryLink id="e39a-d0e2-2bf9-80be" name="Magic Standards" hidden="false" collective="false" import="true" targetId="36b5-7e17-a3d6-e5c7" type="selectionEntryGroup">
+                  <constraints>
+                    <constraint field="points" scope="parent" value="50.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d60d-6d93-3cf2-51a6" type="max"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="10.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
       <costs>
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
@@ -2106,9 +2325,53 @@
           </costs>
         </selectionEntry>
       </selectionEntries>
-      <entryLinks>
-        <entryLink id="24ba-d1eb-4427-68c6" name="Command Group" hidden="false" collective="false" import="true" targetId="29fb-0740-1afe-12a1" type="selectionEntryGroup"/>
-      </entryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="9046-f447-03f6-6470" name="Command Group" hidden="false" collective="false" import="true">
+          <selectionEntries>
+            <selectionEntry id="8de9-64af-59c2-9b10" name="Leader" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="80d3-f363-6cc9-2c1e" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="aad8-b7cf-6a2d-ac73" name="Leader" hidden="false" targetId="777a-7a64-44fa-a78e" type="rule"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="5.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="aea3-1eb9-6979-6f7c" name="Musician" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="41c0-35df-116e-e1cd" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="3df4-b67c-95fb-5bfb" name="Musician" hidden="false" targetId="54c3-1d1b-3ffe-59a5" type="rule"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="5.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="f727-9d0e-2aff-8c27" name="Standard Bearer" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="78c3-ba0c-8311-4bc9" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="72a7-8910-640d-634d" name="Standard Bearer" hidden="false" targetId="6002-29d0-d620-1bd0" type="rule"/>
+              </infoLinks>
+              <entryLinks>
+                <entryLink id="ad7b-247b-1917-2a8a" name="Magic Standards" hidden="false" collective="false" import="true" targetId="36b5-7e17-a3d6-e5c7" type="selectionEntryGroup">
+                  <constraints>
+                    <constraint field="points" scope="parent" value="50.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="501b-a0cc-fd24-73df" type="max"/>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="bd26-38b1-d957-74a4" type="max"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="10.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
       <costs>
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
@@ -2185,9 +2448,53 @@
           </costs>
         </selectionEntry>
       </selectionEntries>
-      <entryLinks>
-        <entryLink id="6e4a-f6c4-f683-ef44" name="Command Group" hidden="false" collective="false" import="true" targetId="29fb-0740-1afe-12a1" type="selectionEntryGroup"/>
-      </entryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="f11e-0249-e491-63d2" name="Command Group" hidden="false" collective="false" import="true">
+          <selectionEntries>
+            <selectionEntry id="ca7f-1524-6028-7561" name="Leader" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="c78b-22bd-3630-0b91" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="eeef-b17f-7ecd-0d19" name="Leader" hidden="false" targetId="777a-7a64-44fa-a78e" type="rule"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="5.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="e483-5c94-8f2c-4c1d" name="Musician" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="57d0-d9e0-f5ba-fdbf" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="583f-6ac1-ec03-7451" name="Musician" hidden="false" targetId="54c3-1d1b-3ffe-59a5" type="rule"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="5.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="7a99-fc58-1b07-b5f5" name="Standard Bearer" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="ed15-a467-4522-8fb5" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="6180-b160-2e80-659e" name="Standard Bearer" hidden="false" targetId="6002-29d0-d620-1bd0" type="rule"/>
+              </infoLinks>
+              <entryLinks>
+                <entryLink id="aad0-6190-d7d8-570d" name="Magic Standards" hidden="false" collective="false" import="true" targetId="36b5-7e17-a3d6-e5c7" type="selectionEntryGroup">
+                  <constraints>
+                    <constraint field="points" scope="parent" value="50.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9467-9c69-c7da-fb84" type="max"/>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="2abf-dcfa-4dd1-e3e5" type="max"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="10.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
       <costs>
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
@@ -2273,9 +2580,53 @@
           </costs>
         </selectionEntry>
       </selectionEntries>
-      <entryLinks>
-        <entryLink id="605a-d929-1685-0e25" name="Command Group" hidden="false" collective="false" import="true" targetId="29fb-0740-1afe-12a1" type="selectionEntryGroup"/>
-      </entryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="beaa-e77f-3e95-d485" name="Command Group" hidden="false" collective="false" import="true">
+          <selectionEntries>
+            <selectionEntry id="8776-1b1e-a591-3f2b" name="Leader" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="7ccb-179e-b8cb-62fc" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="8d09-19a7-505b-3897" name="Leader" hidden="false" targetId="777a-7a64-44fa-a78e" type="rule"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="5.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="1ea2-76d0-09bc-3c99" name="Musician" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="1b3a-76ea-43ea-b4c7" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="8fd0-4cdc-4465-ed2d" name="Musician" hidden="false" targetId="54c3-1d1b-3ffe-59a5" type="rule"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="5.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="ee0a-4b3c-eeb1-0eac" name="Standard Bearer" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="d882-472d-6d23-3c26" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="b7df-9a4e-3c7d-3f33" name="Standard Bearer" hidden="false" targetId="6002-29d0-d620-1bd0" type="rule"/>
+              </infoLinks>
+              <entryLinks>
+                <entryLink id="946b-ebea-0181-b57e" name="Magic Standards" hidden="false" collective="false" import="true" targetId="36b5-7e17-a3d6-e5c7" type="selectionEntryGroup">
+                  <constraints>
+                    <constraint field="points" scope="parent" value="50.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3e66-5145-413e-6449" type="max"/>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="c0e7-8730-e15f-efce" type="max"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="10.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
       <costs>
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
@@ -2382,67 +2733,45 @@
         </selectionEntry>
       </selectionEntries>
       <selectionEntryGroups>
-        <selectionEntryGroup id="4dc7-36c8-71d1-4b88" name="Command Group" hidden="false" collective="false" import="true">
+        <selectionEntryGroup id="4a73-0686-afe3-dd07" name="Command Group" hidden="false" collective="false" import="true">
           <selectionEntries>
-            <selectionEntry id="7ddf-7aba-1f2c-c723" name="Standard Bearer" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="dd9b-fbb4-0f66-bc5a" name="Leader" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="5cc6-4f2f-5785-96ce" type="max"/>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="79c4-561e-1ccc-9045" type="max"/>
               </constraints>
               <infoLinks>
-                <infoLink id="69e8-998d-fae6-a153" name="Standard Bearer" hidden="false" targetId="6002-29d0-d620-1bd0" type="rule"/>
+                <infoLink id="a632-5be7-7935-6b93" name="Leader" hidden="false" targetId="777a-7a64-44fa-a78e" type="rule"/>
               </infoLinks>
-              <selectionEntries>
-                <selectionEntry id="055d-f06d-0973-a2b5" name="Magic Standard" hidden="false" collective="false" import="true" type="upgrade">
+              <costs>
+                <cost name="pts" typeId="points" value="5.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="5c1e-b04a-d0bd-af5d" name="Musician" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="ec02-6150-4d92-f876" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="b09d-bd43-0ed9-01ae" name="Musician" hidden="false" targetId="54c3-1d1b-3ffe-59a5" type="rule"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="5.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="6021-ce16-5a44-cd9f" name="Standard Bearer" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="5d5a-6c83-61db-6f19" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="c1d4-3afc-1eaa-36bf" name="Standard Bearer" hidden="false" targetId="6002-29d0-d620-1bd0" type="rule"/>
+              </infoLinks>
+              <entryLinks>
+                <entryLink id="5991-433e-2208-132b" name="Magic Standards" hidden="false" collective="false" import="true" targetId="36b5-7e17-a3d6-e5c7" type="selectionEntryGroup">
                   <constraints>
-                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="5ad0-e512-cd9b-6941" type="max"/>
-                    <constraint field="points" scope="parent" value="50.0" percentValue="false" shared="false" includeChildSelections="true" includeChildForces="false" id="03dc-1130-8dc8-659c" type="max"/>
+                    <constraint field="points" scope="parent" value="50.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="c88c-0f2f-a34b-3f25" type="max"/>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="1d3d-b055-1422-6389" type="max"/>
                   </constraints>
-                  <entryLinks>
-                    <entryLink id="46ea-9b4c-1a5d-48fe" name="Magic Standards" hidden="false" collective="false" import="true" targetId="36b5-7e17-a3d6-e5c7" type="selectionEntryGroup"/>
-                  </entryLinks>
-                  <costs>
-                    <cost name="pts" typeId="points" value="0.0"/>
-                  </costs>
-                </selectionEntry>
-              </selectionEntries>
-              <costs>
-                <cost name="pts" typeId="points" value="10.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="17de-021d-279c-d072" name="Musician" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="28ea-bcfc-361f-2497" type="max"/>
-              </constraints>
-              <infoLinks>
-                <infoLink id="8446-43bb-d713-639a" name="Musician" hidden="false" targetId="54c3-1d1b-3ffe-59a5" type="rule"/>
-              </infoLinks>
-              <costs>
-                <cost name="pts" typeId="points" value="10.0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="5aff-04ab-7b32-e7eb" name="Preceptor" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="3cf1-c70b-cce8-55c8" type="max"/>
-              </constraints>
-              <profiles>
-                <profile id="77f0-f280-b5a4-5885" name="Preceptor" publicationId="1607-bfe9-82af-d3dc" page="61" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
-                  <characteristics>
-                    <characteristic name="M" typeId="09ad-18df-607b-1215">4</characteristic>
-                    <characteristic name="WS" typeId="f049-8a65-9c04-1559">4</characteristic>
-                    <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">4</characteristic>
-                    <characteristic name="S" typeId="edd2-7979-54a4-6b35">3</characteristic>
-                    <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">3</characteristic>
-                    <characteristic name="W" typeId="27ee-0675-122f-a1b1">1</characteristic>
-                    <characteristic name="I" typeId="7cca-e51f-edc2-7322">4</characteristic>
-                    <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">2</characteristic>
-                    <characteristic name="LD" typeId="a199-f10b-a038-5730">8</characteristic>
-                    <characteristic name="Type" typeId="13f9-a26b-05af-3459">Cavalry, Human</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
-              <infoLinks>
-                <infoLink id="398c-cdb2-21d6-e3c3" name="Champion" hidden="false" targetId="777a-7a64-44fa-a78e" type="rule"/>
-              </infoLinks>
+                </entryLink>
+              </entryLinks>
               <costs>
                 <cost name="pts" typeId="points" value="10.0"/>
               </costs>
@@ -2565,9 +2894,53 @@
           </costs>
         </selectionEntry>
       </selectionEntries>
-      <entryLinks>
-        <entryLink id="b342-1b1a-4b9c-04da" name="Command Group" hidden="false" collective="false" import="true" targetId="29fb-0740-1afe-12a1" type="selectionEntryGroup"/>
-      </entryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="287f-6fbb-5bd6-9068" name="Command Group" hidden="false" collective="false" import="true">
+          <selectionEntries>
+            <selectionEntry id="c647-a3a8-868a-9f68" name="Leader" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="7aac-20a3-526b-efff" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="3eb8-c0e6-ff1b-01ee" name="Leader" hidden="false" targetId="777a-7a64-44fa-a78e" type="rule"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="5.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="604e-cfe1-1c51-42db" name="Musician" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="f2a0-a841-a16c-bdbf" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="7107-48d5-4160-0e60" name="Musician" hidden="false" targetId="54c3-1d1b-3ffe-59a5" type="rule"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="5.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="0f8e-f9a3-f270-9c15" name="Standard Bearer" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="6257-9cdb-d0d0-4636" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="dad0-e94d-83c1-362f" name="Standard Bearer" hidden="false" targetId="6002-29d0-d620-1bd0" type="rule"/>
+              </infoLinks>
+              <entryLinks>
+                <entryLink id="5e16-6413-d735-d6e0" name="Magic Standards" hidden="false" collective="false" import="true" targetId="36b5-7e17-a3d6-e5c7" type="selectionEntryGroup">
+                  <constraints>
+                    <constraint field="points" scope="parent" value="50.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="66d5-76f4-5df8-23ed" type="max"/>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="ad15-d79c-4ac4-c515" type="max"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="10.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
       <costs>
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
@@ -2924,9 +3297,53 @@
           </costs>
         </selectionEntry>
       </selectionEntries>
-      <entryLinks>
-        <entryLink id="72aa-ab50-b4d0-fa12" name="Command Group" hidden="false" collective="false" import="true" targetId="29fb-0740-1afe-12a1" type="selectionEntryGroup"/>
-      </entryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="d372-9ad4-b6dc-26de" name="Command Group" hidden="false" collective="false" import="true">
+          <selectionEntries>
+            <selectionEntry id="b216-acba-cc4b-ea3c" name="Leader" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="4fdc-0645-9d5f-4d2d" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="b0b7-46b5-4c62-4e95" name="Leader" hidden="false" targetId="777a-7a64-44fa-a78e" type="rule"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="5.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="488e-67c2-ca9c-4419" name="Musician" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="0315-0b72-3db7-e1e2" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="868b-7c80-b45b-95f4" name="Musician" hidden="false" targetId="54c3-1d1b-3ffe-59a5" type="rule"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="5.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="3028-6500-7e93-dba4" name="Standard Bearer" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="888f-9bf2-52cc-5bd6" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="cc32-40a0-8cec-5c40" name="Standard Bearer" hidden="false" targetId="6002-29d0-d620-1bd0" type="rule"/>
+              </infoLinks>
+              <entryLinks>
+                <entryLink id="0a38-d3e6-c879-ff71" name="Magic Standards" hidden="false" collective="false" import="true" targetId="36b5-7e17-a3d6-e5c7" type="selectionEntryGroup">
+                  <constraints>
+                    <constraint field="points" scope="parent" value="50.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2bc2-aa08-e9a2-0093" type="max"/>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="8033-1e15-40a0-05c3" type="max"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="10.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
       <costs>
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
@@ -3302,9 +3719,53 @@ If a Misfire is rolled, roll immediately on the Blackpowder Misfire table. If fi
           </costs>
         </selectionEntry>
       </selectionEntries>
-      <entryLinks>
-        <entryLink id="2202-0e90-9ede-4c03" name="Command Group" hidden="false" collective="false" import="true" targetId="29fb-0740-1afe-12a1" type="selectionEntryGroup"/>
-      </entryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="db2a-4d6a-444a-037c" name="Command Group" hidden="false" collective="false" import="true">
+          <selectionEntries>
+            <selectionEntry id="2249-45cd-1823-ac36" name="Leader" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="a1e7-6b21-da88-688d" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="6f5e-1476-0da9-fd73" name="Leader" hidden="false" targetId="777a-7a64-44fa-a78e" type="rule"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="5.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="4957-97f3-41d5-4b43" name="Musician" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="841a-c026-ce71-d611" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="6e95-9bcd-386d-0fe6" name="Musician" hidden="false" targetId="54c3-1d1b-3ffe-59a5" type="rule"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="5.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="1d6a-b1a2-d606-ef46" name="Standard Bearer" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="5aff-5cf3-1909-4a6c" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="70d0-be73-6f07-6bb4" name="Standard Bearer" hidden="false" targetId="6002-29d0-d620-1bd0" type="rule"/>
+              </infoLinks>
+              <entryLinks>
+                <entryLink id="9ed7-d57c-5321-7e7b" name="Magic Standards" hidden="false" collective="false" import="true" targetId="36b5-7e17-a3d6-e5c7" type="selectionEntryGroup">
+                  <constraints>
+                    <constraint field="points" scope="parent" value="50.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9c21-ba95-ccc9-b111" type="max"/>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="17e7-b372-8af2-20ea" type="max"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="10.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
       <costs>
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
@@ -5588,9 +6049,53 @@ If a Misfire is rolled, roll immediately on the Blackpowder Misfire table. If fi
           </costs>
         </selectionEntry>
       </selectionEntries>
-      <entryLinks>
-        <entryLink id="8fcf-3f49-04b6-67e5" name="Command Group" hidden="false" collective="false" import="true" targetId="29fb-0740-1afe-12a1" type="selectionEntryGroup"/>
-      </entryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="a389-f8d7-38c0-f08c" name="Command Group" hidden="false" collective="false" import="true">
+          <selectionEntries>
+            <selectionEntry id="7b05-d2ce-49bd-b250" name="Leader" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="4d32-6f32-4c87-2081" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="04fe-12fd-cbde-1df2" name="Leader" hidden="false" targetId="777a-7a64-44fa-a78e" type="rule"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="5.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="4fd6-ec42-331b-5585" name="Musician" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="53ac-60eb-cf5c-9b03" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="d6ca-6e17-0981-ba07" name="Musician" hidden="false" targetId="54c3-1d1b-3ffe-59a5" type="rule"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="5.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="2107-bcf7-fd71-8ba3" name="Standard Bearer" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="ec52-8f54-6ca2-8182" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="c6e8-b238-c945-e3af" name="Standard Bearer" hidden="false" targetId="6002-29d0-d620-1bd0" type="rule"/>
+              </infoLinks>
+              <entryLinks>
+                <entryLink id="47d4-5389-017c-c0b9" name="Magic Standards" hidden="false" collective="false" import="true" targetId="36b5-7e17-a3d6-e5c7" type="selectionEntryGroup">
+                  <constraints>
+                    <constraint field="points" scope="parent" value="25.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4db3-dd2b-2024-86e2" type="max"/>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="62ae-531b-f9be-6add" type="max"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="10.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
       <costs>
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
@@ -5678,9 +6183,53 @@ If a Misfire is rolled, roll immediately on the Blackpowder Misfire table. If fi
           </costs>
         </selectionEntry>
       </selectionEntries>
-      <entryLinks>
-        <entryLink id="8b8c-068b-858e-c3dd" name="Command Group" hidden="false" collective="false" import="true" targetId="29fb-0740-1afe-12a1" type="selectionEntryGroup"/>
-      </entryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="9706-23ac-a35e-1141" name="Command Group" hidden="false" collective="false" import="true">
+          <selectionEntries>
+            <selectionEntry id="dd68-c03a-15f2-f10e" name="Leader" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="6de7-af4b-272c-aae3" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="fb11-9baa-9049-e786" name="Leader" hidden="false" targetId="777a-7a64-44fa-a78e" type="rule"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="5.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="0811-8acd-da25-4ac7" name="Musician" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="d820-230b-3376-3a6a" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="ea12-ad19-bca9-bac2" name="Musician" hidden="false" targetId="54c3-1d1b-3ffe-59a5" type="rule"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="5.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="0942-d9fe-0394-165c" name="Standard Bearer" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="c748-1239-11c5-b190" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="d824-e3ba-0c37-c4a6" name="Standard Bearer" hidden="false" targetId="6002-29d0-d620-1bd0" type="rule"/>
+              </infoLinks>
+              <entryLinks>
+                <entryLink id="20d3-7cb8-185f-1b05" name="Magic Standards" hidden="false" collective="false" import="true" targetId="36b5-7e17-a3d6-e5c7" type="selectionEntryGroup">
+                  <constraints>
+                    <constraint field="points" scope="parent" value="25.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="153f-57e9-415d-4462" type="max"/>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="8c6b-fa83-c536-a8d1" type="max"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="10.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
       <costs>
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
@@ -5802,9 +6351,53 @@ If a Misfire is rolled, roll immediately on the Blackpowder Misfire table. If fi
           </costs>
         </selectionEntry>
       </selectionEntries>
-      <entryLinks>
-        <entryLink id="df27-cc79-5421-9cfe" name="Command Group" hidden="false" collective="false" import="true" targetId="29fb-0740-1afe-12a1" type="selectionEntryGroup"/>
-      </entryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup id="f859-6350-f8b5-d36e" name="Command Group" hidden="false" collective="false" import="true">
+          <selectionEntries>
+            <selectionEntry id="c731-7fef-2a39-3f45" name="Leader" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="211f-d80e-03e5-b6e3" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="c3f8-3d5d-34a6-a427" name="Leader" hidden="false" targetId="777a-7a64-44fa-a78e" type="rule"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="5.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="2999-bc14-f46c-90aa" name="Musician" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="7450-2efd-4d93-824e" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="1bfa-8271-3b82-6614" name="Musician" hidden="false" targetId="54c3-1d1b-3ffe-59a5" type="rule"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="5.0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry id="59c0-5130-bcd9-8d62" name="Standard Bearer" hidden="false" collective="false" import="true" type="upgrade">
+              <constraints>
+                <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="00e6-98c8-ada8-ad62" type="max"/>
+              </constraints>
+              <infoLinks>
+                <infoLink id="7326-fdbd-ad30-6621" name="Standard Bearer" hidden="false" targetId="6002-29d0-d620-1bd0" type="rule"/>
+              </infoLinks>
+              <entryLinks>
+                <entryLink id="762d-d016-b3a7-f77d" name="Magic Standards" hidden="false" collective="false" import="true" targetId="36b5-7e17-a3d6-e5c7" type="selectionEntryGroup">
+                  <constraints>
+                    <constraint field="points" scope="parent" value="50.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d932-317b-dcdd-1935" type="max"/>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="843f-44f8-6d87-918d" type="max"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="10.0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
       <costs>
         <cost name="pts" typeId="points" value="0.0"/>
       </costs>
