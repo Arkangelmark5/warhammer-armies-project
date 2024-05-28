@@ -1423,7 +1423,7 @@
                     <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="3414-d645-5a1b-b355" type="max"/>
                   </constraints>
                   <infoLinks>
-                    <infoLink id="ce55-cee4-632a-5522" name="Spear" hidden="false" targetId="be39-37ac-ac20-5053" type="profile"/>
+                    <infoLink id="ce55-cee4-632a-5522" name="Spear (On Foot)" hidden="false" targetId="be39-37ac-ac20-5053" type="profile"/>
                   </infoLinks>
                   <costs>
                     <cost name="pts" typeId="points" value="1.0"/>
@@ -2846,6 +2846,17 @@
                   </infoLinks>
                   <costs>
                     <cost name="pts" typeId="points" value="0.0"/>
+                  </costs>
+                </selectionEntry>
+                <selectionEntry id="c588-0164-b21f-fee3" name="Handgun" hidden="false" collective="true" import="true" type="upgrade">
+                  <constraints>
+                    <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="6132-d22e-de43-fc7c" type="max"/>
+                  </constraints>
+                  <infoLinks>
+                    <infoLink id="801b-5f69-88b8-9834" name="Handgun" hidden="false" targetId="bd57-9e45-342f-ee49" type="profile"/>
+                  </infoLinks>
+                  <costs>
+                    <cost name="pts" typeId="points" value="2.0"/>
                   </costs>
                 </selectionEntry>
                 <selectionEntry id="50af-f72a-1490-d54a" name="Crossbow" hidden="false" collective="true" import="true" type="upgrade">
