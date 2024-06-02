@@ -8748,7 +8748,7 @@ If a misfire is rolled, roll a D6. On a 1, the Sky-junk suffers a S 6 hit with M
                 <cost name="pts" typeId="points" value="0"/>
               </costs>
             </selectionEntry>
-            <selectionEntry id="4fe5-1676-6abc-b1c9" name="Medium Armour" hidden="false" collective="false" import="true" type="upgrade">
+            <selectionEntry id="4fe5-1676-6abc-b1c9" name="Medium Armour" hidden="false" collective="true" import="true" type="upgrade">
               <constraints>
                 <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="ebca-8203-a023-8dc7" type="min"/>
                 <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="86dc-c4ff-475e-50a9" type="max"/>
