@@ -6030,7 +6030,7 @@ After these hits are resolved, place the Vermillion Warbird at the line&apos;s e
       <infoLinks>
         <infoLink id="e51f-d656-877f-6742" name="Harmony Yang" hidden="false" targetId="f871-7939-4df7-5d64" type="rule"/>
         <infoLink id="99e9-7e83-ae53-431" name="Harmony Yin" hidden="false" targetId="d575-1ac8-ec73-d8e4" type="rule"/>
-        <infoLink id="7722-2348-f29d-69d5" name="The Art of War" hidden="false" targetId="e733-f5dd-7553-6baa" type="rule"/>
+        <infoLink id="7722-2348-f29d-69d5" name="The Art of War" hidden="true" targetId="e733-f5dd-7553-6baa" type="rule"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="a480-1de3-bc82-bfa" name="Heroes" hidden="false" targetId="d38a-73da-883b-bab9" primary="true"/>
