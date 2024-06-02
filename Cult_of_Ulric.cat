@@ -2933,7 +2933,7 @@
     </selectionEntry>
     <selectionEntry id="4100-fa3c-7b39-5f85" name="Huntsmen" hidden="false" collective="false" import="true" type="unit">
       <categoryLinks>
-        <categoryLink id="0677-17cb-960c-fb3b" name="Core" hidden="false" targetId="b876-2856-f1c2-c4f0" primary="true"/>
+        <categoryLink targetId="fc26-7737-f7cb-8977" id="c908-d61-5d6f-65a1" primary="true" name="Special"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="0013-db02-7efc-f653" name="Huntsman" hidden="false" collective="false" import="true" type="model">
