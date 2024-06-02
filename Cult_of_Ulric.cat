@@ -3076,6 +3076,17 @@
                 <cost name="pts" typeId="points" value="0"/>
               </costs>
             </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Light Armour" hidden="false" id="df7b-1381-d5bc-88b3" collective="true">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="4dc-2a61-8f0d-f02" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+              </constraints>
+              <infoLinks>
+                <infoLink name="Light Armour" id="e78e-29d5-473e-379" hidden="false" targetId="4129-1acd-3564-d3ea" type="profile"/>
+              </infoLinks>
+              <costs>
+                <cost name="pts" typeId="points" value="0.5"/>
+              </costs>
+            </selectionEntry>
           </selectionEntries>
           <selectionEntryGroups>
             <selectionEntryGroup id="331a-c189-afed-0bd3" name="Primary Weapon" hidden="false" collective="false" import="true" defaultSelectionEntryId="e7cc-981a-687e-e23c">
