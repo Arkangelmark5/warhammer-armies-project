@@ -5549,7 +5549,7 @@ After these hits are resolved, place the Vermillion Warbird at the line&apos;s e
                 </selectionEntry>
               </selectionEntries>
               <costs>
-                <cost name="pts" typeId="points" value="55"/>
+                <cost name="pts" typeId="points" value="70"/>
               </costs>
             </selectionEntry>
           </selectionEntries>
@@ -5879,7 +5879,7 @@ After these hits are resolved, place the Vermillion Warbird at the line&apos;s e
             </selectionEntry>
             <selectionEntry id="18fa-c391-37ae-d4a0" name="Light Lances" hidden="false" collective="false" import="true" type="upgrade">
               <constraints>
-                <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="474d-bcdb-7ac2-1d88" type="max"/>
+                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="474d-bcdb-7ac2-1d88" type="max"/>
               </constraints>
               <infoLinks>
                 <infoLink id="4ccd-38b1-9a79-1d51" name="Light Lances" hidden="false" targetId="b2d2-2eb6-2bd2-ddbb" type="profile"/>
@@ -5887,6 +5887,13 @@ After these hits are resolved, place the Vermillion Warbird at the line&apos;s e
               <costs>
                 <cost name="pts" typeId="points" value="3"/>
               </costs>
+              <modifiers>
+                <modifier type="set" value="false" field="hidden">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="5f0-fa25-7e0e-2402" shared="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
@@ -6109,78 +6116,6 @@ After these hits are resolved, place the Vermillion Warbird at the line&apos;s e
               </selectionEntries>
               <costs>
                 <cost name="pts" typeId="points" value="12"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry id="e4e6-684a-16a1-5f2e" name="Sky Lantern" hidden="false" collective="false" import="true" type="upgrade">
-              <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="a429-46b0-8613-36aa" type="max"/>
-              </constraints>
-              <infoLinks>
-                <infoLink id="989f-ce09-683f-aacb" name="Harmony Yin" hidden="false" targetId="d575-1ac8-ec73-d8e4" type="rule"/>
-                <infoLink id="7350-6f62-359f-ea4d" name="Swiftstride" hidden="false" targetId="fdd9-fa75-5594-d363" type="rule"/>
-                <infoLink id="39-b096-f53b-89dc" name="Large Target (10)" hidden="false" targetId="43e0-4e6d-8776-0252" type="rule"/>
-                <infoLink id="e1e4-4ea0-b567-5026" name="Impact Hits (D6)" hidden="false" targetId="e9e6-66cc-623f-8e94" type="rule"/>
-                <infoLink id="9c9d-b05a-63ef-6e2" name="Fly (4)" hidden="false" targetId="7a27-4cc5-bde-2d7f" type="rule"/>
-                <infoLink id="3511-54bc-7970-31c0" name="Sky Lantern" hidden="false" targetId="5261-4368-f665-5f7b" type="profile"/>
-                <infoLink id="8193-e02f-ec8b-d661" name="Sky Lantern" hidden="false" targetId="1e80-2370-43e8-a66f" type="rule"/>
-              </infoLinks>
-              <categoryLinks>
-                <categoryLink id="9487-99dc-cfc-7dd6" name="(Mount)" hidden="false" targetId="(Mount)" primary="false"/>
-              </categoryLinks>
-              <selectionEntries>
-                <selectionEntry id="d196-527b-5020-4eb9" name="Sky Crew" hidden="false" collective="false" import="true" type="upgrade">
-                  <constraints>
-                    <constraint field="selections" scope="parent" value="4" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="f47e-3670-e9b2-1c86" type="min"/>
-                    <constraint field="selections" scope="parent" value="4" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="a9df-ec16-a67f-f507" type="max"/>
-                  </constraints>
-                  <infoLinks>
-                    <infoLink id="6133-3df0-4a95-231a" name="Sky Crew" hidden="false" targetId="362d-6c1c-98d-2948" type="profile"/>
-                  </infoLinks>
-                  <selectionEntries>
-                    <selectionEntry id="5a52-e86-4708-d151" name="Light Armour" hidden="false" collective="true" import="true" type="upgrade">
-                      <constraints>
-                        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="9e81-207f-fb81-b0e9" type="min"/>
-                        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="1e2-eb71-fc56-3f65" type="max"/>
-                      </constraints>
-                      <infoLinks>
-                        <infoLink id="6adb-f040-4d35-85c9" name="Light Armour" hidden="false" targetId="4129-1acd-3564-d3ea" type="profile"/>
-                      </infoLinks>
-                      <costs>
-                        <cost name="pts" typeId="points" value="0"/>
-                      </costs>
-                    </selectionEntry>
-                    <selectionEntry id="52d8-b278-97f5-8f50" name="Hand Weapon" hidden="false" collective="true" import="true" type="upgrade">
-                      <constraints>
-                        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="5309-a3d6-6178-156a" type="min"/>
-                        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="43c2-8b22-ed8b-5cc0" type="max"/>
-                      </constraints>
-                      <infoLinks>
-                        <infoLink id="612b-c4e4-9873-b21e" name="Hand Weapon" hidden="false" targetId="f6da-d707-0cd6-b1dd" type="profile"/>
-                      </infoLinks>
-                      <costs>
-                        <cost name="pts" typeId="points" value="0"/>
-                      </costs>
-                    </selectionEntry>
-                    <selectionEntry id="5e89-2ed3-17a6-88cc" name="Crane Gun" hidden="false" collective="true" import="true" type="upgrade">
-                      <constraints>
-                        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="156e-f779-fd89-10b9" type="min"/>
-                        <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="6192-c075-acd0-db86" type="max"/>
-                      </constraints>
-                      <infoLinks>
-                        <infoLink id="b7b4-4fc5-67c9-e046" name="Crane Gun" hidden="false" targetId="d58-afe0-d239-b024" type="profile"/>
-                      </infoLinks>
-                      <costs>
-                        <cost name="pts" typeId="points" value="0"/>
-                      </costs>
-                    </selectionEntry>
-                  </selectionEntries>
-                  <costs>
-                    <cost name="pts" typeId="points" value="0"/>
-                  </costs>
-                </selectionEntry>
-              </selectionEntries>
-              <costs>
-                <cost name="pts" typeId="points" value="55"/>
               </costs>
             </selectionEntry>
           </selectionEntries>
@@ -8070,7 +8005,7 @@ After these hits are resolved, place the Vermillion Warbird at the line&apos;s e
         </selectionEntry>
       </selectionEntries>
       <costs>
-        <cost name="pts" typeId="points" value="60"/>
+        <cost name="pts" typeId="points" value="75"/>
       </costs>
     </selectionEntry>
     <selectionEntry id="c377-865f-2f9a-df86" name="Onyx Crowmen" hidden="false" collective="false" import="true" type="unit">
