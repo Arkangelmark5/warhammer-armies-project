@@ -23561,6 +23561,12 @@ Unless specified, any rules that apply to the model’s normal attacks do not ap
     <rule name="Rapid Fire" id="581e-7e37-8820-d539" hidden="false">
       <description>Models or weapons with this special rule do not suffer the usual -1 To Hit penalty for firing Multiple Shots.</description>
     </rule>
+    <rule name="Mighty Blow (1)" id="71f9-61ff-eb34-3aff" hidden="false">
+      <description>Models with this rule gain a Strength bonus to all their close combat attacks (including Impact Hits and Stomps) equal to the number in the brackets in the first round of close combat they are involved in. Note that any attack made with a weapon that gives Strength Bonus only applies to attacks made with the weapon itself. This rule is cumulative with other sources of Mighty Blow. If a unit would gain Mighty Blow in a round of close combat after the first for any reason, treat this as the first round of combat for that purpose.</description>
+    </rule>
+    <rule name="Mighty Blow (2)" id="297b-8c44-b0f4-20fc" hidden="false">
+      <description>Models with this rule gain a Strength bonus to all their close combat attacks (including Impact Hits and Stomps) equal to the number in the brackets in the first round of close combat they are involved in. Note that any attack made with a weapon that gives Strength Bonus only applies to attacks made with the weapon itself. This rule is cumulative with other sources of Mighty Blow. If a unit would gain Mighty Blow in a round of close combat after the first for any reason, treat this as the first round of combat for that purpose.</description>
+    </rule>
   </sharedRules>
   <sharedProfiles>
     <profile id="3ecc-5d9c-7d29-ee2f" name="Javelins" publicationId="9e23-79cb-pubN66727" page="94" hidden="false" typeId="6f70-cea1-702c-43bc" typeName="Weapon">
@@ -23581,7 +23587,8 @@ Unless specified, any rules that apply to the model’s normal attacks do not ap
       <characteristics>
         <characteristic name="Range" typeId="59f2-3142-82d5-4f43">Combat</characteristic>
         <characteristic name="Strength" typeId="b80e-7dac-0dea-9add"/>
-        <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Fight in Extra Ranks (1). Might Blow (1), +1 I (Both, only if the unit got charged to its front by WB, Ca, MI, MB, MC, Ch and Mo).</characteristic>
+        <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">+1 Initiative. Fight in Extra Ranks (1). Mighty Blow (1).*
+*Model on foot only. Only applies in turns the model is charged to its front. Mighty Blow does not apply towards Infantry, Large Infantry, Swarms and Shrines.</characteristic>
       </characteristics>
     </profile>
     <profile id="193e-bc43-b252-8eff" name="Great Weapon" publicationId="9e23-79cb-pubN66727" page="92" hidden="false" typeId="6f70-cea1-702c-43bc" typeName="Weapon">
@@ -23616,7 +23623,7 @@ Unless specified, any rules that apply to the model’s normal attacks do not ap
       <characteristics>
         <characteristic name="Range" typeId="59f2-3142-82d5-4f43">18&quot;</characteristic>
         <characteristic name="Strength" typeId="b80e-7dac-0dea-9add">3</characteristic>
-        <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Armour Piercing (1). Multiple Shots (2) (Only applies in turns the model has not moved. Cannot be used to Stand and Shoot.).</characteristic>
+        <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Armour Piercing (1). Multiple Shots (2). (Only applies in turns the model has not moved. Cannot be used to Stand and Shoot.).</characteristic>
       </characteristics>
     </profile>
     <profile id="9dcd-3be8-08b0-96ab" name="Bow" publicationId="9e23-79cb-pubN66727" page="93" hidden="false" typeId="6f70-cea1-702c-43bc" typeName="Weapon">
@@ -23651,7 +23658,10 @@ Unless specified, any rules that apply to the model’s normal attacks do not ap
       <characteristics>
         <characteristic name="Range" typeId="59f2-3142-82d5-4f43">Combat</characteristic>
         <characteristic name="Strength" typeId="b80e-7dac-0dea-9add"/>
-        <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Fight in Extra Ranks (3). Requires Two Hands. Strength Bonus (1), +3 I (Both, only if the unit got charged to its front by WB, Ca, MI, MB, MC, Ch and Mo).</characteristic>
+        <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">+2 Initiative. Fight in Extra Ranks (3). Requires Two Hands. Mighty Blow (1).*
+* Model on foot only. Only applies in turns the model is charged to its front. Mighty Blow does not apply towards Infantry, Large Infantry, Swarms and Shrines.
+
+</characteristic>
       </characteristics>
     </profile>
     <profile id="e56e-fedf-c550-5d81" name="Heavy Lance" publicationId="9e23-79cb-pubN66727" page="92" hidden="false" typeId="6f70-cea1-702c-43bc" typeName="Weapon">
@@ -23665,7 +23675,7 @@ Unless specified, any rules that apply to the model’s normal attacks do not ap
       <characteristics>
         <characteristic name="Range" typeId="59f2-3142-82d5-4f43">18&quot;</characteristic>
         <characteristic name="Strength" typeId="b80e-7dac-0dea-9add">3</characteristic>
-        <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Multiple Shots (2) (Only applies in turns the model has not moved. Cannot be used as a charge reaction.). Volley Fire.</characteristic>
+        <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Multiple Shots (2). (Only applies in turns the model has not moved. Cannot be used as a charge reaction.). Volley Fire.</characteristic>
       </characteristics>
     </profile>
     <profile id="cde7-c47d-3818-1e9d" name="Longbow" publicationId="9e23-79cb-pubN66727" page="93" hidden="false" typeId="6f70-cea1-702c-43bc" typeName="Weapon">

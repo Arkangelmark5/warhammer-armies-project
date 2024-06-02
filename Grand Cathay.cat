@@ -10698,6 +10698,7 @@ If a misfire is rolled, roll a D6. On a 1, the Sky-junk suffers a S 6 hit with M
           </profiles>
           <constraints>
             <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="9de9-10de-156f-506c" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="false" id="79e-75f9-a346-cf7f" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
           </constraints>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Inspired Defence" hidden="false" id="8c3d-abfb-26e-f582">
@@ -10710,6 +10711,7 @@ If a misfire is rolled, roll a D6. On a 1, the Sky-junk suffers a S 6 hit with M
           </profiles>
           <constraints>
             <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="b2f-886a-a137-4e6d" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="false" id="7ff9-b485-5fff-3f6a" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
           </constraints>
         </selectionEntry>
         <selectionEntry type="upgrade" import="true" name="Inspired Marksmanship" hidden="false" id="6c8d-aea1-d370-4be5">
@@ -10722,6 +10724,7 @@ If a misfire is rolled, roll a D6. On a 1, the Sky-junk suffers a S 6 hit with M
           </profiles>
           <constraints>
             <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="9f58-9d02-1d4d-f0ae" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="false" id="5afe-734e-a9ca-a56b" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
           </constraints>
         </selectionEntry>
       </selectionEntries>
