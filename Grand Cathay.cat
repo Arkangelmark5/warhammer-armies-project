@@ -1309,7 +1309,7 @@
                     <cost name="pts" typeId="points" value="0"/>
                   </costs>
                 </selectionEntry>
-                <selectionEntry id="f4ef-dc72-9dce-81c8" name="Spear (On Foot)" hidden="false" collective="true" import="true" type="upgrade">
+                <selectionEntry id="f4ef-dc72-9dce-81c8" name="Spear" hidden="false" collective="true" import="true" type="upgrade">
                   <constraints>
                     <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="448b-4ed7-b1fa-6bbb" type="max"/>
                   </constraints>
@@ -7035,14 +7035,14 @@ After these hits are resolved, place the Vermillion Warbird at the line&apos;s e
           <selectionEntries>
             <selectionEntry id="6b6-cdeb-523c-5c37" name="Shield" hidden="false" collective="true" import="true" type="upgrade">
               <modifiers>
-                <modifier type="set" field="eb1e-6f3a-7f07-7688" value="0">
+                <modifier type="set" field="eb1e-6f3a-7f07-7688" value="1">
                   <conditions>
-                    <condition field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="1591-b0ba-25cf-dbf6" type="atLeast"/>
+                    <condition field="selections" scope="parent" value="1" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="fd70-b97d-fb0f-34af" type="atLeast"/>
                   </conditions>
                 </modifier>
               </modifiers>
               <constraints>
-                <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="eb1e-6f3a-7f07-7688" type="max"/>
+                <constraint field="selections" scope="parent" value="0" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="eb1e-6f3a-7f07-7688" type="max"/>
               </constraints>
               <infoLinks>
                 <infoLink id="7897-ebad-c622-6954" name="Shield" hidden="false" targetId="8bf1-244f-c642-d43f" type="profile"/>
@@ -7195,7 +7195,7 @@ After these hits are resolved, place the Vermillion Warbird at the line&apos;s e
         <cost name="pts" typeId="points" value="0"/>
       </costs>
     </selectionEntry>
-    <selectionEntry id="b5b1-f871-13cd-5ebf" name="Celestial Dragon Crossbowmen" hidden="false" collective="false" import="true" type="unit">
+    <selectionEntry id="b5b1-f871-13cd-5ebf" name="Celestial Dragon Crossbowmen" hidden="true" collective="false" import="true" type="unit">
       <categoryLinks>
         <categoryLink id="65c-817-8cf9-3a66" name="Special" hidden="false" targetId="fc26-7737-f7cb-8977" primary="true"/>
       </categoryLinks>
@@ -7779,14 +7779,14 @@ After these hits are resolved, place the Vermillion Warbird at the line&apos;s e
             <profile id="c327-c858-ddae-5d4" name="Crane Gunner" publicationId="8abe-59b3-1084-5e51" page="25" hidden="false" typeId="d9ed-a507-0102-d498" typeName="Model">
               <characteristics>
                 <characteristic name="M" typeId="09ad-18df-607b-1215">4</characteristic>
-                <characteristic name="WS" typeId="f049-8a65-9c04-1559">4</characteristic>
+                <characteristic name="WS" typeId="f049-8a65-9c04-1559">3</characteristic>
                 <characteristic name="BS" typeId="7b67-9dfa-eeac-d007">4</characteristic>
                 <characteristic name="S" typeId="edd2-7979-54a4-6b35">3</characteristic>
                 <characteristic name="T" typeId="df90-5cbd-8cf9-95b2">3</characteristic>
-                <characteristic name="W" typeId="27ee-0675-122f-a1b1">1</characteristic>
-                <characteristic name="I" typeId="7cca-e51f-edc2-7322">4</characteristic>
-                <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">1</characteristic>
-                <characteristic name="LD" typeId="a199-f10b-a038-5730">8</characteristic>
+                <characteristic name="W" typeId="27ee-0675-122f-a1b1">2</characteristic>
+                <characteristic name="I" typeId="7cca-e51f-edc2-7322">3</characteristic>
+                <characteristic name="A" typeId="bfa2-d38d-7c93-d3f0">2</characteristic>
+                <characteristic name="LD" typeId="a199-f10b-a038-5730">7</characteristic>
                 <characteristic name="Type" typeId="13f9-a26b-05af-3459">Infantry, Human</characteristic>
               </characteristics>
             </profile>
@@ -7824,18 +7824,14 @@ After these hits are resolved, place the Vermillion Warbird at the line&apos;s e
                 <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="8e8-76eb-7657-70d4" type="max"/>
                 <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="fe50-d596-48bb-41b" type="min"/>
               </constraints>
-              <profiles>
-                <profile id="6eef-36a2-5d73-7d22" name="Tower Shield" publicationId="8abe-59b3-1084-5e51" page="25" hidden="false" typeId="884c-d50e-eeb6-eda0" typeName="Armour">
-                  <characteristics>
-                    <characteristic name="Combat" typeId="168d-1cc2-66f3-e766"/>
-                    <characteristic name="Missile" typeId="97ea-ecf7-8d24-b2ca">4+</characteristic>
-                    <characteristic name="Special Rules" typeId="ff58-91e4-84d7-e6e4">Only works against missile attacks to its front.</characteristic>
-                  </characteristics>
-                </profile>
-              </profiles>
               <costs>
                 <cost name="pts" typeId="points" value="0"/>
               </costs>
+              <rules>
+                <rule name="Tower Shield" id="9263-99ed-9760-8da6" hidden="false">
+                  <description>Tower Shields add +3 to the model&apos;s armour save against missile attacks to its front.</description>
+                </rule>
+              </rules>
             </selectionEntry>
           </selectionEntries>
           <selectionEntryGroups>
@@ -7873,6 +7869,11 @@ After these hits are resolved, place the Vermillion Warbird at the line&apos;s e
           <costs>
             <cost name="pts" typeId="points" value="14"/>
           </costs>
+          <rules>
+            <rule name="Unit Strength" id="3ff-50ef-b231-b82c" hidden="false">
+              <description>Unit Strength of 2</description>
+            </rule>
+          </rules>
         </selectionEntry>
       </selectionEntries>
       <costs>
@@ -8761,7 +8762,7 @@ If a misfire is rolled, roll a D6. On a 1, the Sky-junk suffers a S 6 hit with M
             </selectionEntry>
           </selectionEntries>
           <selectionEntryGroups>
-            <selectionEntryGroup id="758e-2de4-ec3b-295f" name="Primary Weapon" hidden="false" collective="false" import="true" defaultSelectionEntryId="f752-43c1-e7b1-46c0">
+            <selectionEntryGroup id="758e-2de4-ec3b-295f" name="Primary Weapon" hidden="false" collective="true" import="true" defaultSelectionEntryId="f752-43c1-e7b1-46c0">
               <constraints>
                 <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="d225-65ff-6d28-b0d0" type="max"/>
                 <constraint field="selections" scope="parent" value="1" percentValue="false" shared="false" includeChildSelections="false" includeChildForces="false" id="997a-ace6-962a-8e68" type="min"/>
@@ -11092,7 +11093,7 @@ When placing this unit, it must be wholly within the spell&apos;s range and at l
     <profile id="d58-afe0-d239-b024" name="Crane Gun" publicationId="8abe-59b3-1084-5e51" page="25" hidden="false" typeId="6f70-cea1-702c-43bc" typeName="Weapon">
       <characteristics>
         <characteristic name="Range" typeId="59f2-3142-82d5-4f43">30&quot;</characteristic>
-        <characteristic name="Strength" typeId="b80e-7dac-0dea-9add">4</characteristic>
+        <characteristic name="Strength" typeId="b80e-7dac-0dea-9add">5</characteristic>
         <characteristic name="Special Rules" typeId="de63-d6da-efa8-00ac">Armour Piercing (1). Ponderous</characteristic>
       </characteristics>
     </profile>
