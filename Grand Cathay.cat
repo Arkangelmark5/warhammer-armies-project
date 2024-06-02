@@ -5398,7 +5398,7 @@ After these hits are resolved, place the Vermillion Warbird at the line&apos;s e
       <infoLinks>
         <infoLink id="3fb3-bc08-117f-43c8" name="Harmony Yang" hidden="false" targetId="f871-7939-4df7-5d64" type="rule"/>
         <infoLink id="9758-4a4e-2c76-1b1" name="Harmony Yin" hidden="false" targetId="d575-1ac8-ec73-d8e4" type="rule"/>
-        <infoLink id="71ad-f0db-767b-b878" name="The Art of War" hidden="false" targetId="e733-f5dd-7553-6baa" type="rule"/>
+        <infoLink name="Tactician" id="60b2-905b-8a28-a16f" hidden="false" targetId="54ba-ba2b-c698-9e6b" type="rule"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="1475-cf50-ee1e-5e49" name="Lords" hidden="false" targetId="d280-b7df-c185-2ba5" primary="true"/>
@@ -6030,7 +6030,7 @@ After these hits are resolved, place the Vermillion Warbird at the line&apos;s e
       <infoLinks>
         <infoLink id="e51f-d656-877f-6742" name="Harmony Yang" hidden="false" targetId="f871-7939-4df7-5d64" type="rule"/>
         <infoLink id="99e9-7e83-ae53-431" name="Harmony Yin" hidden="false" targetId="d575-1ac8-ec73-d8e4" type="rule"/>
-        <infoLink id="7722-2348-f29d-69d5" name="The Art of War" hidden="true" targetId="e733-f5dd-7553-6baa" type="rule"/>
+        <infoLink id="7722-2348-f29d-69d5" name="Tactician" hidden="false" targetId="54ba-ba2b-c698-9e6b" type="rule"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink id="a480-1de3-bc82-bfa" name="Heroes" hidden="false" targetId="d38a-73da-883b-bab9" primary="true"/>
@@ -10687,26 +10687,44 @@ If a misfire is rolled, roll a D6. On a 1, the Sky-junk suffers a S 6 hit with M
       </entryLinks>
     </selectionEntryGroup>
     <selectionEntryGroup id="39d1-4bd8-600a-359f" name="Tactician" hidden="false" collective="false" import="true">
-      <profiles>
-        <profile id="d6e8-9f5d-8cee-06c4" name="Inspired Defence" publicationId="8abe-59b3-1084-5e51" page="4" hidden="false" typeId="c401-9cec-753a-0907" typeName="Tactician">
-          <characteristics>
-            <characteristic name="Effect" typeId="01bb-81c1-f98b-2148">Enemy units charging this unit to the front lose all their charge bonuses.</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="1aef-9d12-02c6-a013" name="Inspired Assault" publicationId="8abe-59b3-1084-5e51" page="4" hidden="false" typeId="c401-9cec-753a-0907" typeName="Tactician">
-          <characteristics>
-            <characteristic name="Effect" typeId="01bb-81c1-f98b-2148">The unit gains the Devastating Charge special rule.</characteristic>
-          </characteristics>
-        </profile>
-        <profile id="1149-6baf-bcbd-70c1" name="Inspired Marksmanship" publicationId="8abe-59b3-1084-5e51" page="4" hidden="false" typeId="c401-9cec-753a-0907" typeName="Tactician">
-          <characteristics>
-            <characteristic name="Effect" typeId="01bb-81c1-f98b-2148">The unit ignores all non-magical Shooting Modifiers.</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
-      <infoLinks>
-        <infoLink id="269c-c7a2-c804-397e" name="Tactician" hidden="false" targetId="54ba-ba2b-c698-9e6b" type="rule"/>
-      </infoLinks>
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Inspired Assault" hidden="false" id="c719-dad4-e14a-fa15">
+          <profiles>
+            <profile name="Inspired Assault" typeId="c401-9cec-753a-0907" typeName="Tactician" hidden="false" id="1aef-9d12-02c6-a013" publicationId="8abe-59b3-1084-5e51" page="4">
+              <characteristics>
+                <characteristic name="Effect" typeId="01bb-81c1-f98b-2148">The unit gains the Devastating Charge special rule.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="9de9-10de-156f-506c" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+          </constraints>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Inspired Defence" hidden="false" id="8c3d-abfb-26e-f582">
+          <profiles>
+            <profile name="Inspired Defence" typeId="c401-9cec-753a-0907" typeName="Tactician" hidden="false" id="d6e8-9f5d-8cee-06c4" publicationId="8abe-59b3-1084-5e51" page="4">
+              <characteristics>
+                <characteristic name="Effect" typeId="01bb-81c1-f98b-2148">Enemy units charging this unit to the front lose all their charge bonuses.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="b2f-886a-a137-4e6d" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+          </constraints>
+        </selectionEntry>
+        <selectionEntry type="upgrade" import="true" name="Inspired Marksmanship" hidden="false" id="6c8d-aea1-d370-4be5">
+          <profiles>
+            <profile name="Inspired Marksmanship" typeId="c401-9cec-753a-0907" typeName="Tactician" hidden="false" id="1149-6baf-bcbd-70c1" publicationId="8abe-59b3-1084-5e51" page="4">
+              <characteristics>
+                <characteristic name="Effect" typeId="01bb-81c1-f98b-2148">The unit ignores all non-magical Shooting Modifiers.</characteristic>
+              </characteristics>
+            </profile>
+          </profiles>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="false" id="9f58-9d02-1d4d-f0ae" percentValue="false" includeChildSelections="false" includeChildForces="false"/>
+          </constraints>
+        </selectionEntry>
+      </selectionEntries>
     </selectionEntryGroup>
   </sharedSelectionEntryGroups>
   <sharedRules>
