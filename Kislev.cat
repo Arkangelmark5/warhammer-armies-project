@@ -737,7 +737,7 @@
         </selectionEntry>
         <selectionEntry id="a80b-b562-e65a-c84c" name="Magic Items" hidden="false" collective="false" import="true" type="upgrade">
           <modifiers>
-            <modifier type="set" field="cd0b-c20f-f04c-71c6" value="0">
+            <modifier type="set" field="89c0-4d2b-b8fc-0d4d" value="25.0">
               <conditions>
                 <condition field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="e388-2d84-79a4-1659" type="atLeast"/>
               </conditions>
